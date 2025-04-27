@@ -31,6 +31,7 @@ copy "${wine.toWinePath(
     join(gameDir, atob("SG9Zb0tQcm90ZWN0LnN5cw=="))
   )}" "%WINDIR%\\system32\\"
 cd /d "${wine.toWinePath(gameDir)}"
+start .\\genshin_impact_fps_unlocker.exe
 ${await (async () => {
   if (config.fpsUnlock !== "default") {
     return `"${wine.toWinePath(
